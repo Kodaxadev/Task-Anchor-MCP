@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "task-anchor"
+version = "1.1.0"
+description = "MCP server providing ADHD executive function enforcement for Claude Desktop"
+readme = "../README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+dependencies = [
+    "mcp~=1.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[project.scripts]
+task-anchor = "task_anchor.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["task_anchor"]
+
+[tool.hatch.build.targets.sdist]
+include = ["task_anchor/"]
+
+# ---------------------------------------------------------------------------
+# Claude Desktop config reference (update the path to your actual install):
+#
+# {
+#   "mcpServers": {
+#     "task-anchor": {
+#       "command": "python",
+#       "args": ["-m", "task_anchor.server"],
+#       "cwd": "C:/path/to/TaskAnchor/mcp-server"
+#     }
+#   }
+# }
+#
+# Or if installed via pip:
+#   "command": "task-anchor"
+# ---------------------------------------------------------------------------

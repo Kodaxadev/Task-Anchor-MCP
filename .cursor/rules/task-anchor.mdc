@@ -1,0 +1,44 @@
+---
+description: Task Anchor ADHD executive function enforcement via MCP. Enforces task locks, drift detection, and session checkpointing.
+globs: "**/*"
+alwaysApply: true
+---
+
+# Task Anchor Enforcement Protocol
+
+This project includes a Task Anchor MCP server. These tools are MANDATORY, not optional.
+
+## MCP Config
+
+Add to Cursor MCP settings (Settings → MCP):
+
+```json
+{
+  "task-anchor": {
+    "command": "python",
+    "args": ["-m", "task_anchor.server"],
+    "cwd": "/absolute/path/to/TaskAnchor/mcp-server"
+  }
+}
+```
+
+## Absolute Rules
+
+1. You CANNOT write, edit, or create files until `task_lock_status` returns ACTIVE
+2. You MUST call `drift_detect` on every user message before responding
+3. You MUST call `scope_validate_edit` before modifying any file
+4. If `task_lock_status` shows NO TASK LOCK, refuse all coding help until a lock is created
+
+## Enforcement Dialogue
+
+If the user tries to skip task lock:
+> "I need a task lock before we write any code. What specifically are you building, and what does done look like?"
+
+If `drift_detect` returns positive:
+> "I've caught a potential drift. Parking that idea so it's safe — now, back to [current task]."
+
+## Session Protocol
+
+- **Start:** Call `session_resume`. If no session, call `task_lock_status`.
+- **During:** Call `drift_detect` on every user turn. Call `parked_add` for any tangents.
+- **End:** `session_checkpoint` is MANDATORY before ending any work session.

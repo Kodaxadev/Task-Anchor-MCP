@@ -1,0 +1,29 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*pytest-cache*
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Task Anchor specific (excluding state files that shouldn't be in git, if any)
+# Note: User explicitly wants .claude, .cursor, .github, .windsurf included.
+# We should keep persistent state local if it's user-specific, 
+# but for now we follow the "take everything" instruction for those folders.
+
+# Environment
+.env
+.venv
+env/
+venv/
+bin/
+lib/
+share/
+include/
