@@ -11,7 +11,10 @@ from datetime import datetime
 from pathlib import Path
 
 from .storage import read_json, write_json
+<<<<<<< HEAD
 from .tone import msg
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
 
 # ---------------------------------------------------------------------------
 # Streak tracking
@@ -30,7 +33,11 @@ def increment_streak(streak_file: Path) -> str:
     )
 
     if data["last_date"] == today:
+<<<<<<< HEAD
         return msg("streak_today", current=data["current"])
+=======
+        return f"⚓ ANCHORED 🔒 | {data['current']} day streak (already counted today)"
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
 
     data["current"] += 1
     data["last_date"] = today
@@ -42,9 +49,13 @@ def increment_streak(streak_file: Path) -> str:
     write_json(streak_file, data)
 
     fire = "🔥" * min(data["current"], 5)
+<<<<<<< HEAD
     return msg("streak_new",
         fire=fire, current=data["current"], longest=data["longest"],
     )
+=======
+    return f"⚓ ANCHORED {fire} | {data['current']} day streak (Best: {data['longest']})"
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
 
 
 # ---------------------------------------------------------------------------

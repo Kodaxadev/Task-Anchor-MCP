@@ -76,6 +76,7 @@
   "tests/test_models.py::TestTaskLockSerialisation::test_from_dict_missing_optional_fields",
   "tests/test_models.py::TestTaskLockSerialisation::test_from_dict_round_trip",
   "tests/test_models.py::TestTaskLockSerialisation::test_from_dict_strips_unknown_keys",
+<<<<<<< HEAD
   "tests/test_models.py::TestTaskLockSerialisation::test_to_dict_contains_all_fields",
   "tests/test_tone_flow.py::TestFlowMode::test_activate_and_check",
   "tests/test_tone_flow.py::TestFlowMode::test_deactivate",
@@ -95,4 +96,7 @@
   "tests/test_tone_flow.py::TestToneSystem::test_set_tone_invalid_raises",
   "tests/test_tone_flow.py::TestToneSystem::test_set_tone_minimal",
   "tests/test_tone_flow.py::TestToneSystem::test_set_tone_strict"
+=======
+  "tests/test_models.py::TestTaskLockSerialisation::test_to_dict_contains_all_fields"
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
 ]

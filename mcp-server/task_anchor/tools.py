@@ -186,6 +186,7 @@ def get_tool_definitions() -> list[Tool]:
                 },
             },
         ),
+<<<<<<< HEAD
         Tool(
             name="set_tone",
             description=(
@@ -235,4 +236,6 @@ def get_tool_definitions() -> list[Tool]:
             description="Ends flow mode early and re-enables drift detection.",
             inputSchema={"type": "object", "properties": {}},
         ),
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
     ]

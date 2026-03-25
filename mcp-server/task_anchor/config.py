@@ -56,5 +56,8 @@ SESSION_LOG_FILE = BASE / "SESSION_LOG.md"
 DRIFT_HISTORY    = BASE / "DRIFT_HISTORY.json"
 STREAK_FILE      = BASE / "STREAK.json"
 EXIT_VALIDATED   = BASE / ".exit_validated"
+<<<<<<< HEAD
 TONE_FILE        = BASE / "TONE.json"
 FLOW_MODE_FILE   = BASE / "FLOW_MODE.json"
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b

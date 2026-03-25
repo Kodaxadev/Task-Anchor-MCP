@@ -17,15 +17,21 @@ from mcp.types import TextContent
 from .handlers import (
     handle_drift_detect,
     handle_drift_history_log,
+<<<<<<< HEAD
     handle_flow_mode_activate,
     handle_flow_mode_deactivate,
     handle_get_tone,
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
     handle_parked_add,
     handle_parked_list,
     handle_scope_validate_edit,
     handle_session_checkpoint,
     handle_session_resume,
+<<<<<<< HEAD
     handle_set_tone,
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
     handle_task_complete,
     handle_task_lock_create,
     handle_task_lock_status,
@@ -51,10 +57,13 @@ _ROUTES: Dict[str, Any] = {
     "session_resume":     lambda _:    handle_session_resume(),
     "scope_validate_edit": lambda args: handle_scope_validate_edit(args),
     "drift_history_log":  lambda args: handle_drift_history_log(args),
+<<<<<<< HEAD
     "set_tone":           lambda args: handle_set_tone(args),
     "get_tone":           lambda _:    handle_get_tone(),
     "flow_mode_activate": lambda args: handle_flow_mode_activate(args),
     "flow_mode_deactivate": lambda _:  handle_flow_mode_deactivate(),
+=======
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
 }
 
 

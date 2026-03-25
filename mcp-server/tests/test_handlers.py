@@ -21,6 +21,7 @@ def isolated_state(tmp_path, monkeypatch):
     """Redirect all state file I/O to a fresh temp directory per test."""
     monkeypatch.setenv("TASK_ANCHOR_DIR", str(tmp_path))
 
+<<<<<<< HEAD
     # Force reload of modules that cache paths at import time.
     # Order matters: config → models → messages → tone → helpers/flow → handlers
     import task_anchor.config as cfg
@@ -47,6 +48,18 @@ def isolated_state(tmp_path, monkeypatch):
     # Set strict tone so existing test assertions (written for strict output) pass.
     tn.set_tone("strict")
 
+=======
+    # Force reload of modules that cache paths at import time
+    import task_anchor.config as cfg
+    import task_anchor.models as mdl
+    import task_anchor.helpers as hlp
+    import task_anchor.handlers as hdl
+    importlib.reload(cfg)
+    importlib.reload(mdl)
+    importlib.reload(hlp)
+    importlib.reload(hdl)
+
+>>>>>>> 3dfce2ba419c32da80299054f4c0620c14fbf49b
     yield tmp_path
 
 
