@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Justi\\\\Downloads\\\\Alpha\\\\TaskAnchor\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "mcp__Windows-MCP__PowerShell",
+      "Bash(pip install *)",
+      "Bash(pytest tests/ -v --tb=short)",
+      "Bash(python -m pytest tests/ -v --tb=short)",
+      "Bash(python -m pytest tests/ --tb=short -q)",
+      "Bash(node \"C:\\\\Users\\\\Justi\\\\.claude\\\\skills\\\\code-warden\\\\tools\\\\get-context.js\")",
+      "Bash(node \"C:\\\\Users\\\\Justi\\\\.claude\\\\skills\\\\code-warden\\\\tools\\\\warden-lint.js\" \"C:\\\\Users\\\\Justi\\\\Downloads\\\\Alpha\\\\TaskAnchor\\\\mcp-server\" --verbose)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(node \"C:\\\\Users\\\\Justi\\\\.claude\\\\skills\\\\code-warden\\\\tools\\\\verify-secrets.js\" \"C:\\\\Users\\\\Justi\\\\Downloads\\\\Alpha\\\\TaskAnchor\" --verbose)",
+      "Bash(python -m pytest tests/ -q --tb=no)",
+      "Bash(python -m pytest tests/ -q --tb=short)",
+      "Bash(findstr version *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Justi\\\\Downloads\\\\Alpha\\\\TaskAnchor\\\\mcp-server\\\\pyproject.toml\")",
+      "Bash(Select-String \"version\")",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(git --no-pager show FETCH_HEAD:.gitignore)",
+      "Bash(git checkout *)",
+      "Bash(git add *)"
+    ]
+  }
+}
